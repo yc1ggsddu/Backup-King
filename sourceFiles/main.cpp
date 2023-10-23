@@ -44,9 +44,9 @@ int main()
     cout << "1、普通文件；2、软硬连接；3、管道文件；4、目录文件" << endl
          << endl;
     cout << "当前目录结构如下：\n";
-    chdir("/home/bozai/Desktop/superbackup/testFiles");
-    primaryBackuper bozai;
-    bozai.printDir(".", 0);
+    chdir("/home/wuhanhan1/Desktop/Backup-King/testFiles");
+    primaryBackuper wuhanhan1;
+    wuhanhan1.printDir(".", 0);
 
     while (function_flag != 15)
     {
@@ -66,7 +66,7 @@ int main()
             if (chdir(dirPathName.c_str()) == 0)
             {
                 cout << "目录切换成功,当前工作目录树如下：\n";
-                bozai.printDir(".", 0);
+                wuhanhan1.printDir(".", 0);
             }
             else
             {
@@ -326,7 +326,7 @@ int main()
         {
             cout << "请输入要打包的目录：\n";
             getline(cin, sourceDirOrFile);
-            if (access(sourceDirOrFile.c_str(), F_OK) || bozai.EmptyDir(sourceDirOrFile))
+            if (access(sourceDirOrFile.c_str(), F_OK) || wuhanhan1.EmptyDir(sourceDirOrFile))
             {
                 cout << "当前目录不存在或当前目录为空，请检查后重新输入\n";
             }
@@ -406,7 +406,7 @@ int main()
                     cin >> flag;
                     if (flag == 'y' || flag == 'Y')
                     {
-                        bozai.mkDir(targetDir);
+                        wuhanhan1.mkDir(targetDir);
                     }
                     else
                         break;
@@ -444,7 +444,7 @@ int main()
                     cin >> flag;
                     if (flag == 'y' || flag == 'Y')
                     {
-                        bozai.mkDir(targetDir);
+                        wuhanhan1.mkDir(targetDir);
                     }
                     else
                         break;
@@ -478,7 +478,7 @@ int main()
                     cin >> flag;
                     if (flag == 'y' || flag == 'Y')
                     {
-                        bozai.mkDir(targetDir);
+                        wuhanhan1.mkDir(targetDir);
                     }
                     else
                         break;
